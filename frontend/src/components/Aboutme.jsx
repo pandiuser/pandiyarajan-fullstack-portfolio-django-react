@@ -2,6 +2,22 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import api from '../utils/api'
 
+// import pythonLogo from "../assets/tech/Python.jpg"
+// import djangoLogo from '../assets/tech/Django.png'
+// import flaskLogo from '../assets/tech/Flask.png'
+// import fastapiLogo from '../assets/tech/FastAPI.png'
+// import jsLogo from '../assets/tech/JavaScript.png'
+// import reactLogo from '../assets/tech/React.png'
+// import mysqlLogo from '../assets/tech/MySQL.png'
+// import mongodbLogo from '../assets/tech/MongoDB.png'
+// import htmlLogo from '../assets/tech/HTML.png'
+// import cssLogo from '../assets/tech/CSS.png'
+// import gitlabLogo from '../assets/tech/GitLab.png'
+// import dockerLogo from '../assets/tech/Docker.png'
+// import kuberneterLogo from '../assets/tech/Kubernetes.png'
+// import awsLogo from '../assets/tech/AWS.png'
+// import linuxLogo from '../assets/tech/Linux.png'
+
 import pythonLogo from "../assets/tech/Python.jpg"
 import djangoLogo from '../assets/tech/Django.png'
 import flaskLogo from '../assets/tech/Flask.png'

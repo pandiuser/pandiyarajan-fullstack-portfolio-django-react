@@ -164,6 +164,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+
 # Media files (Uploads)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -282,12 +283,12 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:5173",
     "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com",
-    "https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"
+    # "https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"
 ]
 
 # Ensure admin site works with proxy
 USE_X_FORWARDED_HOST = True
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # File Upload Settings
 # FILE_UPLOAD_PERMISSIONS = 0o644
