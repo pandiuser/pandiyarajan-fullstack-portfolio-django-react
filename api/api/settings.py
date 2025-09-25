@@ -166,6 +166,11 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_DIRS = [
+    BASE_DIR / "frontend" / "dist" / "assets",
+]
+
+
 
 # Media files (Uploads)
 MEDIA_URL = '/media/'
@@ -283,6 +288,8 @@ CSRF_TRUSTED_ORIGINS = [
 # Ensure admin site works with proxy
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
 
 # File Upload Settings
 # FILE_UPLOAD_PERMISSIONS = 0o644
