@@ -236,7 +236,8 @@ SPECTACULAR_SETTINGS = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -262,6 +263,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",  # React/Vue frontend dev server
     "http://127.0.0.1:3000",
     "http://localhost:5173"
+    "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com"
 ]
 
 # Ensure admin site works with proxy
