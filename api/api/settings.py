@@ -42,7 +42,7 @@ DEBUG = True
 # ALLOWED_HOSTS = os.getenv(
 #     'ALLOWED_HOSTS').split(',')
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1","0.0.0.0","pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1","0.0.0.0","pandiyarajan-fullstack-portfolio-django-igcq.onrender.com","pandiyarajan-fullstack-portfolio-django-igcq.onrender.com/api"]
 
 
 # Application definition
