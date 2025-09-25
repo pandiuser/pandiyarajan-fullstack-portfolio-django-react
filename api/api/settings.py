@@ -14,9 +14,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv(".env.dev")  # loads variables from .env.dev
+import dj_database_url
+import os
+
+
+# load_dotenv(".env.dev")  # loads variables from .env.dev
 
 
 
@@ -101,16 +105,25 @@ WSGI_APPLICATION = "api.wsgi.application"
 #     }
 # }
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "postgres",
+#         "USER": "postgres",
+#         "PASSWORD": "admin@123",
+#         "HOST": "db",
+#         "PORT": 5432,
+#     }
+# }
+
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "admin@123",
-        "HOST": "db",
-        "PORT": 5432,
-    }
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL"),
+        conn_max_age=600,  # keeps connections alive across requests
+    )
 }
+
 
 
 # Password validation
