@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+from corsheaders.defaults import default_headers
+
+
 
 from pathlib import Path
 from datetime import timedelta
@@ -42,7 +45,7 @@ DEBUG = True
 # ALLOWED_HOSTS = os.getenv(
 #     'ALLOWED_HOSTS').split(',')
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1","0.0.0.0","pandiyarajan-fullstack-portfolio-django-igcq.onrender.com","pandiyarajan-fullstack-portfolio-django-igcq.onrender.com/api"]
+ALLOWED_HOSTS = ["pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"]
 
 
 # Application definition
@@ -273,6 +276,16 @@ CORS_ALLOWED_ORIGINS = [
 #     "sec-ch-ua-mobile",
 #     "sec-ch-ua-platform",
 # ]
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "authorization",
+    "content-type",
+    "x-csrftoken",
+    "x-requested-with",
+    "sec-ch-ua",
+    "sec-ch-ua-mobile",
+    "sec-ch-ua-platform",
+]
 
 
 # Security settings for admin
