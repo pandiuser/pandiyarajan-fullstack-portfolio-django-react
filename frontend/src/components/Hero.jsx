@@ -1,31 +1,12 @@
 import React from 'react'
-import { useQuery } from '@tanstack/react-query'
-import api from '../utils/api'
 import { Github, Linkedin } from "lucide-react"   // ✅ Import icons
+import profilePic from "../assets/Profile.jpg"    // ✅ Local image
 
 const Hero = () => {
-    const { data: cv, isLoading, error } = useQuery({
-        queryKey: ["cv"],
-        queryFn: async () => {
-            const response = await api.get("/cv/active");
-            return response.data;
-        },
-    });
-    const { data: profileImage, isLoading: profileImageLoading, error: profileImageError } = useQuery({
-        queryKey: ["profileImage"],
-        queryFn: async () => {
-            const response = await api.get("/profileimage/active");
-            return response.data;
-        },
-    });
-
     const scrollToContact = () => {
         const contactSection = document.getElementById('contact');
         contactSection?.scrollIntoView({ behavior: 'smooth' });
     };
-
-    if (isLoading || profileImageLoading) return <div>Loading...</div>;
-    if (error || profileImageError) return <div>Error: {error?.message || profileImageError?.message}</div>;
 
     return (
         <section id="hero" className="pt-24">
@@ -47,18 +28,16 @@ const Hero = () => {
                             >
                                 Contact Me
                             </button>
-                            {cv?.file && (
-                                <a
-                                    href={cv.file}
-                                    download
-                                    className="bg-gray-200 text-gray-900 px-6 py-3 rounded-lg shadow hover:bg-gray-300 transition"
-                                >
-                                    Download CV
-                                </a>
-                            )}
+                            <a
+                                href="/Pandiyarajan.pdf"   // ✅ file inside public/
+                                download
+                                className="bg-gray-200 text-gray-900 px-6 py-3 rounded-lg shadow hover:bg-gray-300 transition"
+                            >
+                                Download CV
+                            </a>
                         </div>
 
-                        {/* Social Links with Icons + Text */}
+                        {/* Social Links */}
                         <div className="flex gap-6 justify-center md:justify-start">
                             <a
                                 href="https://github.com/pandiuser"
@@ -81,13 +60,11 @@ const Hero = () => {
 
                     {/* Image Section */}
                     <div className="flex-1 flex justify-center md:justify-end">
-                        {profileImage?.image && (
-                            <img
-                                src={profileImage.image}
-                                alt="Pandiyarajan S"
-                                className="rounded-2xl w-80 h-80 object-cover shadow-lg"
-                            />
-                        )}
+                        <img
+                            src={profilePic}
+                            alt="Pandiyarajan S"
+                            className="rounded-2xl w-80 h-80 object-cover shadow-lg"
+                        />
                     </div>
                 </div>
             </div>
