@@ -40,7 +40,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 # ALLOWED_HOSTS = os.getenv(
 #     'ALLOWED_HOSTS').split(',')
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1","0.0.0.0","*"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1","0.0.0.0","https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com","https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"]
 
 
 # Application definition
@@ -233,7 +233,7 @@ SPECTACULAR_SETTINGS = {
 # CORS_ALLOWED_ORIGINS = os.getenv(
 #     'CORS_ALLOWED_ORIGINS').split(',')
 
-CORS_ALLOW_ALL_ORIGINS  = True
+# CORS_ALLOW_ALL_ORIGINS  = False
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
