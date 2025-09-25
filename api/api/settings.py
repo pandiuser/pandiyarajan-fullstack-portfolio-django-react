@@ -264,9 +264,9 @@ CORS_ALLOW_HEADERS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",  # React/Vue frontend dev server
     "http://127.0.0.1:3000",
-    "http://localhost:5173"
+    "http://localhost:5173",
     "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com",
-    # "https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"
+    "https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"
 ]
 
 # Ensure admin site works with proxy
