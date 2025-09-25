@@ -3,9 +3,9 @@ import { useQuery } from "@tanstack/react-query"
 import api from "../utils/api"
 
 // Import your static award images
-import award1Img from "../assets/awards/SPOT.png"
-import award2Img from "../assets/awards/MVP.png"
-import award3Img from "../assets/awards/COE.png"
+import award1Img from "../assets/awards/SPOT.jpeg"
+import award2Img from "../assets/awards/MVP.jpeg"
+import award3Img from "../assets/awards/COE.jpg"
 
 const Awards = () => {
   const { data: awards, isLoading, error } = useQuery({
