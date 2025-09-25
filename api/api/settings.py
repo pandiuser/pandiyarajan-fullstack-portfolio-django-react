@@ -166,9 +166,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    BASE_DIR / "frontend" / "dist" / "assets",
-]
+
 
 
 
@@ -243,7 +241,7 @@ SPECTACULAR_SETTINGS = {
 # CORS_ALLOW_ALL_ORIGINS  = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com",
+    "https://frontendproject-topaz.vercel.app"
 ]
 
 # CORS_ALLOW_CREDENTIALS = True
@@ -282,7 +280,7 @@ CORS_ALLOWED_ORIGINS = [
 #     'CSRF_TRUSTED_ORIGINS').split(',')
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com",
+    "https://frontendproject-topaz.vercel.app",
 ]
 
 # Ensure admin site works with proxy
