@@ -243,7 +243,7 @@ CORS_ALLOWED_ORIGINS = [
     # "https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"
 ]
 
-CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_CREDENTIALS = True
 
 # Add these headers to allow JWT authentication
 # CORS_ALLOW_HEADERS = [
@@ -258,20 +258,20 @@ CORS_ALLOW_CREDENTIALS = True
 #     'x-requested-with',
 # ]
 
-CORS_ALLOW_HEADERS = [
-    "accept",
-    "accept-encoding",
-    "authorization",
-    "content-type",
-    "dnt",
-    "origin",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-    "sec-ch-ua",
-    "sec-ch-ua-mobile",
-    "sec-ch-ua-platform",
-]
+# CORS_ALLOW_HEADERS = [
+#     "accept",
+#     "accept-encoding",
+#     "authorization",
+#     "content-type",
+#     "dnt",
+#     "origin",
+#     "user-agent",
+#     "x-csrftoken",
+#     "x-requested-with",
+#     "sec-ch-ua",
+#     "sec-ch-ua-mobile",
+#     "sec-ch-ua-platform",
+# ]
 
 
 # Security settings for admin
