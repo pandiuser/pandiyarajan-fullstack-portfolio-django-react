@@ -1,17 +1,7 @@
 import React from 'react';
-import { useQuery } from '@tanstack/react-query';
-import api from '../utils/api';
 import { Mail, Phone, Linkedin, FileText } from 'lucide-react';
 
 const Contactme = () => {
-  const { data: cv, isLoading: cvLoading, error } = useQuery({
-    queryKey: ["cv"],
-    queryFn: async () => {
-      const response = await api.get("/cv/active");
-      return response.data;
-    },
-  });
-
   return (
     <section id="contact" className="container mx-auto px-4 py-16 animate-fadeInUp">
       <div className="bg-gray-900 shadow-xl rounded-2xl p-10 text-center">
@@ -62,32 +52,22 @@ const Contactme = () => {
             </a>
           </div>
 
-          {/* CV */}
+          {/* Resume */}
           <div className="bg-gray-800 shadow rounded-xl p-6 hover:shadow-lg transition">
             <h3 className="font-semibold mb-2 flex items-center justify-center gap-2 text-gray-100">
               <FileText size={18}/> Resume
             </h3>
-            {cvLoading ? (
-              <span className="text-gray-400">Loading CV...</span>
-            ) : cv?.file ? (
-              <a
-                href={cv.file}
-                download
-                className="text-blue-400 hover:underline"
-              >
-                Download my CV
-              </a>
-            ) : (
-              <span className="text-gray-400">CV not available</span>
-            )}
+            <a
+              href="/Pandiyarajan.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              Download my CV
+            </a>
           </div>
         </div>
-
-        {error && (
-          <p className="mt-4 text-red-400">
-            {error?.message || "Error loading CV. Please try again later."}
-          </p>
-        )}
       </div>
     </section>
   );
