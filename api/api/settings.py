@@ -244,7 +244,7 @@ SPECTACULAR_SETTINGS = {
 # CORS_ALLOW_ALL_ORIGINS  = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://frontendproject-topaz.vercel.app"
+    "https://pandiyarajan-portfolio.vercel.app"
 ]
 
 # CORS_ALLOW_CREDENTIALS = True
@@ -293,7 +293,7 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 #     'CSRF_TRUSTED_ORIGINS').split(',')
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://frontendproject-topaz.vercel.app",
+    "https://pandiyarajan-portfolio.vercel.app",
 ]
 
 # Ensure admin site works with proxy
