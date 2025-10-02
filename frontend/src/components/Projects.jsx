@@ -5,7 +5,7 @@ import api from "../utils/api"
 // Import static images
 import project1Img from "../assets/projects/portfolio.png"
 import project2Img from "../assets/projects/student.png"
-// import project3Img from "../assets/projects/project3.png"
+import project3Img from "../assets/projects/ticket_creation.png"
 
 const Projects = () => {
   const { data: projects, isLoading, error } = useQuery({
@@ -26,8 +26,8 @@ const Projects = () => {
     )
 
   // Map API projects to include static images
-  const staticImages = [project1Img, project2Img]
-    // const staticImages = [project1Img, project2Img, project3Img]
+  // const staticImages = [project1Img, project2Img]
+  const staticImages = [project1Img, project2Img, project3Img]
 
   const projectsWithImages = projects?.results?.map((project, index) => ({
     ...project,
