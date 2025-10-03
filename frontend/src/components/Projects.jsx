@@ -4,8 +4,8 @@ import api from "../utils/api"
 
 // Import static images
 import project1Img from "../assets/projects/portfolio.png"
-import project2Img from "../assets/projects/student.png"
-import project3Img from "../assets/projects/ticket_creation.png"
+import project2Img from "../assets/projects/ticket_creation.png"
+import project3Img from "../assets/projects/student.png"
 
 const Projects = () => {
   const { data: projects, isLoading, error } = useQuery({
