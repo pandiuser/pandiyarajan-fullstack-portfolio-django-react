@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_spectacular",
-    "portfolio",
+    "portfolio.apps.PortfolioConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
