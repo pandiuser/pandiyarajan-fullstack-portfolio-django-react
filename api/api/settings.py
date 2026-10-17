@@ -44,7 +44,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 #     'ALLOWED_HOSTS').split(',')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') + [
-    "pandiyarajan-fullstack-portfolio-django-igcq.onrender.com",
+    "pandiyarajan-fullstack-portfolio-django-y1my.onrender.com",
     ".onrender.com",
 ]
 
@@ -246,6 +246,7 @@ SPECTACULAR_SETTINGS = {
 
 CORS_ALLOWED_ORIGINS = [
     "https://pandiyarajan-portfolio.vercel.app",
+    "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
