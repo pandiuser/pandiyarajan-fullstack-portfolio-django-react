@@ -246,10 +246,13 @@ SPECTACULAR_SETTINGS = {
 
 CORS_ALLOWED_ORIGINS = [
     "https://pandiyarajan-portfolio.vercel.app",
+    "https://pandiyarajan-portfolio-pandiusers-projects.vercel.app",
+    "https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com",
     "https://pandiyarajan-fullstack-portfolio-django-y1my.onrender.com",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+
 
 # CORS_ALLOW_CREDENTIALS = True
 
