@@ -11,7 +11,7 @@ import axios from "axios";
 // export default api;
 
 const api = axios.create({
-  baseURL: "https://pandiyarajan-fullstack-portfolio-django-igcq.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000/api",
   headers: {
     "Content-Type": "application/json",
   },

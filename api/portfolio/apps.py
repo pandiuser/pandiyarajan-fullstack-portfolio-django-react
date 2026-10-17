@@ -5,15 +5,20 @@ class PortfolioConfig(AppConfig):
     name = "portfolio"
 
     def ready(self):
+        from django.db import OperationalError, ProgrammingError
         from django.contrib.auth import get_user_model
         User = get_user_model()
 
-        user, created = User.objects.get_or_create(
-            username='admin',
-            defaults={'email': 'admin@gmail.com'}
-        )
+        try:
+            user, created = User.objects.get_or_create(
+                username='admin',
+                defaults={'email': 'admin@gmail.com'}
+            )
 
-        user.set_password('admin123')
-        user.is_staff = True
-        user.is_superuser = True
-        user.save()
+            user.set_password('admin123')
+            user.is_staff = True
+            user.is_superuser = True
+            user.save()
+        except (OperationalError, ProgrammingError):
+            # Tables don't exist yet (initial migrate) — skip
+            pass

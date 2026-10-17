@@ -2,29 +2,12 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import api from '../utils/api'
 
-// import pythonLogo from "../assets/tech/Python.jpg"
-// import djangoLogo from '../assets/tech/Django.png'
-// import flaskLogo from '../assets/tech/Flask.png'
-// import fastapiLogo from '../assets/tech/FastAPI.png'
-// import jsLogo from '../assets/tech/JavaScript.png'
-// import reactLogo from '../assets/tech/React.png'
-// import mysqlLogo from '../assets/tech/MySQL.png'
-// import mongodbLogo from '../assets/tech/MongoDB.png'
-// import htmlLogo from '../assets/tech/HTML.png'
-// import cssLogo from '../assets/tech/CSS.png'
-// import gitlabLogo from '../assets/tech/GitLab.png'
-// import dockerLogo from '../assets/tech/Docker.png'
-// import kuberneterLogo from '../assets/tech/Kubernetes.png'
-// import awsLogo from '../assets/tech/AWS.png'
-// import linuxLogo from '../assets/tech/Linux.png'
-
 import pythonLogo from "../assets/tech/Python.jpg"
 import djangoLogo from '../assets/tech/Django.png'
-import flaskLogo from '../assets/tech/Flask.png'
 import fastapiLogo from '../assets/tech/FastAPI.png'
 import jsLogo from '../assets/tech/JavaScript.png'
 import reactLogo from '../assets/tech/React.png'
-import mysqlLogo from '../assets/tech/MySQL.png'
+import postgresLogo from '../assets/tech/PostgreSQL.png'
 import mongodbLogo from '../assets/tech/MongoDB.png'
 import htmlLogo from '../assets/tech/HTML.png'
 import cssLogo from '../assets/tech/CSS.png'
@@ -46,21 +29,25 @@ const Aboutme = () => {
     if (isLoading) return <div>loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
 
-    // ✅ Split into paragraphs
-    const paragraphs = aboutme.results[0].description
-        .split(".")
-        .map(sentence => sentence.trim())
-        .filter(sentence => sentence.length > 0);
+    // Guard: no data yet
+    const firstResult = aboutme?.results?.[0];
+
+    // ✅ Split into paragraphs on double newlines (only if data exists)
+    const paragraphs = firstResult
+        ? firstResult.description
+            .split(/\n\n+/)
+            .map(para => para.trim())
+            .filter(para => para.length > 0)
+        : [];
 
     // ✅ Technology stack (local images)
     const techStack = [
         { name: "Python", logo: pythonLogo },
-        { name: "Django", logo: djangoLogo },
-        { name: "Flask", logo: flaskLogo },
         { name: "FastAPI", logo: fastapiLogo },
+        { name: "Django", logo: djangoLogo },
         { name: "JavaScript", logo: jsLogo },
         { name: "React", logo: reactLogo },
-        { name: "MySQL", logo: mysqlLogo },
+        { name: "PostgreSQL", logo: postgresLogo },
         { name: "MongoDB", logo: mongodbLogo },
         { name: "HTML", logo: htmlLogo },
         { name: "CSS", logo: cssLogo },
@@ -69,7 +56,6 @@ const Aboutme = () => {
         { name: "AWS", logo: awsLogo },
         { name: "Linux", logo: linuxLogo },
         { name: "Kubernetes", logo: kuberneterLogo },
-        
     ];
 
     return (
@@ -89,9 +75,13 @@ const Aboutme = () => {
                     </div>
 
                     <div className="text-lg text-gray-100 leading-relaxed space-y-4 mb-12">
-                        {paragraphs.map((para, index) => (
-                            <p key={index}>{para}.</p>
-                        ))}
+                        {paragraphs.length > 0 ? (
+                            paragraphs.map((para, index) => (
+                                <p key={index}>{para}.</p>
+                            ))
+                        ) : (
+                            <p className="text-gray-400 italic">No about me content yet. Add it via the Django admin.</p>
+                        )}
                     </div>
 
                     {/* Technologies Section */}

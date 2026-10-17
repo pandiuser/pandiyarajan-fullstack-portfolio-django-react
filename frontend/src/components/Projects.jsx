@@ -49,45 +49,48 @@ const Projects = () => {
           {projectsWithImages?.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 shadow rounded-xl p-6 hover:shadow-lg transition flex flex-col"
+              className="bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 flex flex-col"
             >
-              {/* Static project image */}
-              <div className="w-full h-40 flex items-center justify-center mb-4">
+              {/* Project image */}
+              <div className="w-full h-48 bg-gray-700 flex items-center justify-center overflow-hidden">
                 <img
                   src={project.staticImage}
                   alt={project.title}
-                  className="max-h-full max-w-full object-contain rounded-lg hover:scale-105 transition-transform"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300 p-2"
                 />
               </div>
 
-              <h3 className="text-xl font-semibold text-blue-400 mb-2 text-center">
-                {project.title}
-              </h3>
-              <p className="text-gray-300 mb-4 text-left flex-grow">
-                {project.description}
-              </p>
+              {/* Card content */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-bold text-blue-400 mb-3 text-center">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed text-center flex-1 mb-5">
+                  {project.description}
+                </p>
 
-              <div className="flex flex-wrap gap-3 mt-auto">
-                {project.url && (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-center bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
-                  >
-                    View Project
-                  </a>
-                )}
-                {project.github_url && (
-                  <a
-                    href={project.github_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-700 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-600 transition"
-                  >
-                    View Code
-                  </a>
-                )}
+                <div className="flex justify-center gap-3 mt-auto">
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition text-sm font-medium"
+                    >
+                      View Project
+                    </a>
+                  )}
+                  {project.github_url && (
+                    <a
+                      href={project.github_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-gray-700 text-white px-5 py-2 rounded-lg shadow hover:bg-gray-600 transition text-sm font-medium"
+                    >
+                      View Code
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}

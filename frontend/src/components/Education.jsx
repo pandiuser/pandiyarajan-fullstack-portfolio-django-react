@@ -28,28 +28,51 @@ const Education = () => {
               key={edu.id}
               className="bg-gray-800 shadow rounded-xl p-6 hover:shadow-lg transition"
             >
-              <h3 className="text-xl font-semibold text-blue-400">{edu.degree}</h3>
-              <p className="text-gray-300">
-                <span className="font-semibold text-gray-200">🎓 School:</span> {edu.school}
-              </p>
-              {edu.grade && (
-                <p className="text-gray-300">
-                  <span className="font-semibold text-gray-200">📊 Grade:</span> {edu.grade}
-                </p>
-              )}
-              <p className="text-gray-300">
-                <span className="font-semibold text-gray-200">⏳ Years:</span>{" "}
-                <time>{edu.years}</time>
+              {/* Degree + Years */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                <h3 className="text-xl font-bold text-blue-400">🎓 {edu.degree}</h3>
+                <span className="text-sm text-gray-400 whitespace-nowrap">🗓 {edu.years}</span>
+              </div>
+
+              {/* School */}
+              <p className="text-gray-300 text-sm mb-1">
+                🏫 <span className="font-medium text-gray-200">{edu.school}</span>
               </p>
 
+              {/* Grade (optional) */}
+              {edu.grade && (
+                <p className="text-gray-400 text-sm mb-1">
+                  📊 Grade: <span className="text-gray-200 font-medium">{edu.grade}</span>
+                </p>
+              )}
+
+              {/* Description / points */}
               {edu.description && (
-                <ul className="list-disc list-inside text-gray-300 mt-3 space-y-2">
-                  {edu.description
-                    ?.split(/(?<=\.)\s+/)
-                    .map((point, idx) =>
-                      point.trim() ? <li key={idx}>{point}</li> : null
-                    )}
-                </ul>
+                <div className="mt-3">
+                  {/* Split description into intro and bullet points */}
+                  {(() => {
+                    const parts = edu.description.split('•');
+                    const intro = parts[0].trim();
+                    const bullets = parts.slice(1).map(p => p.trim()).filter(Boolean);
+                    return (
+                      <>
+                        {intro && (
+                          <p className="text-gray-400 text-sm italic mb-2 leading-relaxed">{intro}</p>
+                        )}
+                        {bullets.length > 0 && (
+                          <ul className="space-y-2">
+                            {bullets.map((pt, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-gray-300 text-sm leading-relaxed">
+                                <span className="text-blue-400 shrink-0 mt-1">▸</span>
+                                <span>{pt}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </>
+                    );
+                  })()}
+                </div>
               )}
             </article>
           ))}

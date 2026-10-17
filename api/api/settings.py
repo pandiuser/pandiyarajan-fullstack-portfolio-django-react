@@ -45,7 +45,11 @@ DEBUG = True
 # ALLOWED_HOSTS = os.getenv(
 #     'ALLOWED_HOSTS').split(',')
 
-ALLOWED_HOSTS = ["pandiyarajan-fullstack-portfolio-django-igcq.onrender.com"]
+ALLOWED_HOSTS = [
+    "pandiyarajan-fullstack-portfolio-django-igcq.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -125,7 +129,7 @@ WSGI_APPLICATION = "api.wsgi.application"
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL"),
+        default=os.environ.get("DATABASE_URL", "sqlite:///" + str(BASE_DIR / "db.sqlite3")),
         conn_max_age=600,  # keeps connections alive across requests
     )
 }
@@ -244,7 +248,9 @@ SPECTACULAR_SETTINGS = {
 # CORS_ALLOW_ALL_ORIGINS  = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://pandiyarajan-portfolio.vercel.app"
+    "https://pandiyarajan-portfolio.vercel.app",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
 ]
 
 # CORS_ALLOW_CREDENTIALS = True
@@ -294,6 +300,9 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 
 CSRF_TRUSTED_ORIGINS = [
     "https://pandiyarajan-portfolio.vercel.app",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:8000",
 ]
 
 # Ensure admin site works with proxy
