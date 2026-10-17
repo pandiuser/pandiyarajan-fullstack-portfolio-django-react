@@ -58,3 +58,5 @@ ssl/
 dist/
 build/
 *.pyc 
+.vercel
+.env*
