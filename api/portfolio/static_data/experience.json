@@ -1,0 +1,34 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "title": "Senior Software Engineer",
+      "company": "Entropik",
+      "location": "Chennai, India",
+      "years": "Oct 2025 \u2013 Present",
+      "description": "Entropik is an AI-powered consumer research platform. Led backend architecture for the Decode product suite.\n\u2022 Led design and development of multiple backend product features using FastAPI, focusing on scalable architecture, performance optimization, and maintainability across 50+ microservices.\n\u2022 Defined service boundaries and API contracts, enabling parallel frontend-backend development and reducing integration time.\n\u2022 Engineered an AI-assisted moderated interview pipeline that auto-generates research insights, significantly reducing cost and eliminating manual moderation overhead.\n\u2022 Collaborated closely with ML engineers, data engineers, and data scientists to productionize AI/ML models, optimize inference pipelines, and improve overall system performance.\n\u2022 Improved production observability using structured logging and monitoring tools, measurably reducing incident resolution time.\n\u2022 Owned system reliability and operational excellence across distributed services, including performance tuning, observability, and incident management.\n\u2022 Collaborated directly with product stakeholders to gather requirements, refine feature scope, and align deliverables with business goals.\n\u2022 Explored and integrated emerging AI/ML tools and technologies to deliver innovative backend solutions that addressed evolving business needs.\n\u2022 Diagnosed and resolved critical production bugs under tight timelines, minimising downtime and ensuring service reliability.",
+      "ordinal": 1
+    },
+    {
+      "id": 2,
+      "title": "Software Engineer",
+      "company": "Servion Global Solutions",
+      "location": "Chennai, India",
+      "years": "Apr 2025 \u2013 Oct 2025",
+      "description": "\u2022 Worked on enterprise UCaaS/CCaaS implementations using RingCentral solutions.\n\u2022 Supported customer onboarding, IVR configuration, call queues, and number porting activities.\n\u2022 Contributed to project documentation, automation scripts, and cross-functional delivery processes.",
+      "ordinal": 2
+    },
+    {
+      "id": 3,
+      "title": "Software Engineer",
+      "company": "AppViewX",
+      "location": "Coimbatore, India",
+      "years": "Feb 2022 \u2013 Apr 2025",
+      "description": "AppViewX is a global leader in certificate lifecycle management and network automation. Worked with enterprise clients across US, UK, and Singapore.\n\u2022 Designed and delivered 100+ Python-based automation workflows for Certificate Lifecycle Management covering discovery, creation, renewal, revocation, and expiry notifications \u2013 reducing manual intervention significantly.\n\u2022 Built a Django-powered CLM system that streamlined certificate operations and boosted team productivity by 67%.\n\u2022 Developed and containerized Flask-based microservice APIs to automate F5 LTM object provisioning (virtual servers, pools, nodes, monitors), improving deployment speed and reducing errors.\n\u2022 Leveraged FastAPI to design and deploy secure, high-performance asynchronous APIs for production environments.\n\u2022 Integrated cross-platform notification workflows across ServiceNow, JIRA, Slack, MS Teams, PagerDuty, and BMC Remedy, simplifying PKI and infrastructure monitoring.\n\u2022 Built and fine-tuned an AI-powered chatbot using NLP and Named Entity Recognition (NER), improving user query resolution and end-user experience.\n\u2022 Developed an internal AppViewX SDK that reduced API call failures and improved overall deployment stability.\n\u2022 Collaborated with Product Owners on requirement gathering, effort estimation, and functional specs; coordinated cross-functional teams to deliver high-priority features on time.\n\u2022 Proficient in AWS (S3, EC2, Lambda) for scalable deployment and serverless application management; experienced with SQL and MongoDB query optimization.",
+      "ordinal": 3
+    }
+  ]
+}

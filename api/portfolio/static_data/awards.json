@@ -1,0 +1,28 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "title": "Most Valuable Player Award \u2013 AppViewX",
+      "description": "Awarded for driving successful migrations for over 20 FP and 22.1 migration customers within two quarters. Demonstrated strong adaptability across time zones and evolving project requirements, ensuring smooth transitions and high customer satisfaction.",
+      "image": "awards/images/MVP.jpeg",
+      "ordinal": 1
+    },
+    {
+      "id": 2,
+      "title": "Spot Award \u2013 AppViewX",
+      "description": "Recognized for exceptional analysis and troubleshooting skills in Migration and SWAT teams. Successfully transitioned to the CS team, delivering critical solutions for clients like Anaplan and DenizBank. Notably resolved a complex certificate push use case for Dominion Energy using a programmable connector.",
+      "image": "awards/images/SPOT.jpeg",
+      "ordinal": 2
+    },
+    {
+      "id": 3,
+      "title": "Circle of Excellence Award \u2013 AppViewX",
+      "description": "Received the Circle of Excellence 2023 award at AppViewX for delivering 300+ custom solutions to 100+ customers. Contributed to key automation projects, customer upgrades, webinars, blogs, and product enhancements that drove customer success and value realization. Honored to be part of a high-impact team driving innovation and growth.",
+      "image": "awards/images/COE.jpg",
+      "ordinal": 3
+    }
+  ]
+}

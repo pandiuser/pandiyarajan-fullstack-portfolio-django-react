@@ -1,0 +1,16 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "school": "Mepco Schlenk Engineering College, Sivakasi, India",
+      "degree": "B.E. \u2013 Electronics and Communication Engineering",
+      "years": "2018 \u2013 2022",
+      "grade": null,
+      "description": "Graduated with a strong foundation in electronics, communication systems, and problem-solving, which laid the groundwork for my technical skills in software development, Python programming, and automation.\n\u2022 Developed analytical thinking and project implementation skills during studies, helping me excel in backend development and automation projects.",
+      "ordinal": 1
+    }
+  ]
+}

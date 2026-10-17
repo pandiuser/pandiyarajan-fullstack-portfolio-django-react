@@ -1,0 +1,31 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "title": "Fullstack Portfolio",
+      "description": "A full-stack portfolio website built with Django REST Framework and React. Features JWT authentication, REST API for managing portfolio data, and a responsive UI with Tailwind CSS.",
+      "url": "https://github.com/pandiuser/pandiyarajan-fullstack-portfolio-django-react",
+      "ordinal": 1,
+      "images": []
+    },
+    {
+      "id": 2,
+      "title": "Ticket Management System",
+      "description": "A web app to manage support tickets, track ticket status, assign tasks, and resolve issues with a user interface and REST API built using Python Flask and MySQL.",
+      "url": "https://github.com/pandiuser/python-based-ticket-creation-system",
+      "ordinal": 2,
+      "images": []
+    },
+    {
+      "id": 3,
+      "title": "Student Management App",
+      "description": "A web application to manage student records, attendance, grades, and academic information with a clean interface and REST API.",
+      "url": "https://github.com/pandiuser/Student-Management-App",
+      "ordinal": 3,
+      "images": []
+    }
+  ]
+}

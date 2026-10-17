@@ -58,7 +58,7 @@ const Contactme = () => {
               <FileText size={18}/> Resume
             </h3>
             <a
-              href="/Pandiyarajan.pdf"
+              href="/Pandiyarajan_Resume.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"

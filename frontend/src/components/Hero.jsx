@@ -29,7 +29,7 @@ const Hero = () => {
                                 Contact Me
                             </button>
                             <a
-                                href="/Pandiyarajan.pdf"   // ✅ file inside public/
+                                href="/Pandiyarajan_Resume.pdf"
                                 download
                                 className="bg-gray-200 text-gray-900 px-6 py-3 rounded-lg shadow hover:bg-gray-300 transition"
                             >

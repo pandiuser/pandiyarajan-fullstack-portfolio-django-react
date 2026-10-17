@@ -1,0 +1,11 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "description": "Backend Engineer with 4+ years of experience designing, developing, and deploying scalable backend systems, high-performance APIs, and microservices for production environments.\n\nProficient in Python, FastAPI, Django, PostgreSQL, MongoDB, AWS, Docker, and Kubernetes, with a strong foundation in backend architecture, API design, and cloud-native development.\n\nExperienced in building reliable systems, integrating AI/ML capabilities, automating complex enterprise workflows, and improving application performance, reliability, and scalability. Collaborated closely with ML engineers, data engineers, and data scientists to productionize AI/ML models, optimize inference pipelines, and improve overall system performance.\n\nDefined service boundaries and API contracts, enabling parallel frontend-backend development and reducing integration time. Diagnosed and resolved critical production issues under tight timelines, minimizing downtime and maintaining system reliability.\n\nSkilled at collaborating with product and cross-functional engineering teams to translate business requirements into maintainable, scalable, and production-ready software solutions."
+    }
+  ]
+}
